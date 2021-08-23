@@ -46,8 +46,10 @@ fi
 
 if [[  $head -eq $tails ]]             #when their is a tie
 	then
-	while [[ $(($head-$tails)) -le 2 ]]  && [[ $(($tails-$head)) -le 2 ]] 
+		
+	while [[ $(($head-$tails)) != 2 ]]  && [[ $(($tails-$head)) != 2 ]] 
 		do
+
 			rann=$((RANDOM%2))
 			if [[ $rann -eq 0 ]] 
 				then
